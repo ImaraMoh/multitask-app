@@ -1,0 +1,110 @@
+body {
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    height: fit-content;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.calendar {
+    max-width: 400px;
+    margin: 20px auto;
+    border: 2px solid #80b6da;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #000000;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.calendar-header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border: 1px solid #80b6da;
+}
+
+.day-name, .day {
+    text-align: center;
+    padding: 15px;
+}
+
+.day-name {
+    font-weight: bold;
+    background-color:#99a4c9;
+    border: 1px solid #80b6da;
+    font-size: 20px;
+}
+
+.day {
+    text-align: center;
+    border: 1px solid #80b6da;
+    height: 25px;
+    font-size: 16px;
+}
+
+.day.empty {
+    border: 1px solid #80b6da;
+    background-color: transparent;
+}
+
+.go-to-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.go-to-form label {
+    margin-right: 5px;
+    font-size: 16px;
+    color: #3700ff;
+    
+}
+
+.go-to-form input {
+    width: 50px;
+    margin-right: 10px;
+    padding: 5px;
+    border: 2px solid #4d7eda;
+    align-items: center;
+    color: #3700ff;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073e6;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+

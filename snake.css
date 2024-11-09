@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.pixelated-title {
+    font-family: 'Press Start 2P', sans-serif; /* Use pixelated font */
+    color: #069435;
+    text-align: center;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 700px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 120px; /* Adjust width as needed */
+}
+
+.arrows button {
+    padding: 10px;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073e6;
+    color: white;
+}
+
+.arrows button:hover {
+    background-color: #005bb5;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.controls {
+    margin-bottom: 10px;
+}
+
+canvas {
+    border: 2px solid black;
+}
+
+#currentScore {
+    margin-left: 10px;
+}
+
+#gameMessage {
+    margin-top: 10px;
+    font-size: 20px;
+    color: red;
+}
+
+#highScoreList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: decimal;
+    gap: 5px;
+ 
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073e6;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #005bb5;
+    transform: scale(1.05);
+}

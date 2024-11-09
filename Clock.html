@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alarm App</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>   
+
+<div class="alarm-app">
+    <!-- Tabs for Alarm, Stopwatch, and Timer -->
+    <div class="tabs">
+        <button class="tab active" id="alarm-tab">Alarm</button>
+        <button class="tab" id="stopwatch-tab">Stopwatch</button>
+        <button class="tab" id="timer-tab">Timer</button>
+        <button class="tab" id="Back">Back to Main Page</button>
+    </div>
+
+    <!-- Alarm Section -->
+    <div class="content" id="alarm-content">
+        <h2>Set Alarm</h2>
+        
+        <label for="alarm-time">Time:<br></label>
+        <input type="time" id="alarm-time" />
+
+        <label for="alarm-tone">Alarm Tone:</label>
+        <select id="alarm-tone">
+            <option value="tone1.mp3">Tone 1</option>
+            <option value="tone2.mp3">Tone 2</option>
+            <option value="tone3.mp3">Tone 3</option>
+        </select>
+        
+        <label for="snooze-duration">Snooze Duration (mins):</label>
+        <input type="number" id="snooze-duration" min="1" value="5" />
+
+        <button id="repeat-button">Repeat Options</button> <!-- Opens the modal for repeat days -->
+
+        <button id="set-alarm-button">Set Alarm</button>
+        
+        <ul id="alarm-list"></ul> <!-- List of alarms -->
+
+        <!-- Display time until the next alarm rings -->
+        <div id="next-alarm-info"></div>
+    </div>
+
+    <!-- Stopwatch Section -->
+    <div class="content" id="stopwatch-content" style="display: none;">
+        <h2>Stopwatch</h2>
+        <span id="stopwatch-display">00:00:00</span>
+        <button id="start-stopwatch">Start</button>
+        <button id="stop-stopwatch">Stop</button>
+        <button id="reset-stopwatch">Reset</button>
+    </div>
+
+    <!-- Timer Section -->
+    <div class="content" id="timer-content" style="display: none;">
+        <h2>Timer</h2>
+        <input type="number" id="timer-minutes" placeholder="Minutes" />
+        <input type="number" id="timer-seconds" placeholder="Seconds" />
+        <button id="start-timer">Start</button>
+        <button id="stop-timer">Stop</button>
+        <button id="reset-timer">Reset</button>
+        <span id="timer-display">00:00</span>
+    </div>
+
+    <!-- Modal for Repeat Options -->
+    <div class="modal" id="repeat-modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span> <!-- Close button -->
+            <h3>Select Repeat Days</h3>
+            <div id="repeat-days">
+                <label><input type="checkbox" value="1"> Monday</label>
+                <label><input type="checkbox" value="2"> Tuesday</label>
+                <label><input type="checkbox" value="3"> Wednesday</label>
+                <label><input type="checkbox" value="4"> Thursday</label>
+                <label><input type="checkbox" value="5"> Friday</label>
+                <label><input type="checkbox" value="6"> Saturday</label>
+                <label><input type="checkbox" value="7"> Sunday</label>
+            </div>
+            <button id="apply-repeat">Apply</button> <!-- Button to apply repeat days -->
+        </div>
+    </div>
+
+    <!-- Audio elements for alarm tones -->
+    <audio id="alarm-sound1" src="tone1.mp3" preload="auto"></audio>
+    <audio id="alarm-sound2" src="tone2.mp3" preload="auto"></audio>
+    <audio id="alarm-sound3" src="tone3.mp3" preload="auto"></audio>
+
+</div>
+
+<script src="clock.js"></script> <!-- JavaScript file -->
+</body>

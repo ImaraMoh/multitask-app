@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar App</title>
+    <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+<nav>
+   <button onclick="window.location.href='index.html'">Back to Main Page</button> <!-- Back Button -->
+</nav>
+<h1>Calendar</h1>
+<div class="calendar">
+    <div class="calendar-header">
+        <button class="prev-month">&lt;</button>
+        <span class="month-year" id="month-year"></span>
+        <button class="next-month">&gt;</button>
+    </div>
+    <div class="calendar-grid" id="calendar-grid">
+        <!-- Day names -->
+        <div class="day-name">Sun</div>
+        <div class="day-name">Mon</div>
+        <div class="day-name">Tue</div>
+        <div class="day-name">Wed</div>
+        <div class="day-name">Thu</div>
+        <div class="day-name">Fri</div>
+        <div class="day-name">Sat</div>
+    </div>
+</div>
+
+<div class="go-to-form">
+    <label for="go-to-month">Month:</label>
+    <input type="number" id="go-to-month" min="1" max="12" value="1">
+
+    <label for="go-to-year">Year:</label>
+    <input type="number" id="go-to-year" value="2024">
+
+    <button id="go-to-button">Go To</button>
+</div>
+
+<script src="calendar.js"></script>
+
+</body>
+</html>

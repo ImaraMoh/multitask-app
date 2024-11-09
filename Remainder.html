@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reminder App</title>
+    <link rel="stylesheet" href="remainder.css">
+</head>
+<body>   
+    
+    <div class="container">
+        <button id="Back">Back to Main Page</button>
+        <h1>Reminder App</h1>
+        <form id="reminderForm">
+            <label for="reminderText">Reminder:</label>
+            <input type="text" id="reminderText" placeholder="Enter your reminder" required>
+            <label for="reminderTime">Time:</label>
+            <input type="datetime-local" id="reminderTime" required>
+            <button type="submit">Add Reminder</button>
+        </form>
+
+        <h2>Upcoming Reminders:</h2>
+        <ul id="reminderList">
+            <!-- List of reminders will be populated here -->
+        </ul>
+    </div>
+
+    <script src="remainder.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Include font -->
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+    <!-- Main Menu -->
+    <div id="menuScreen" class="screen">
+        <h1 class="pixelated-title">Snake Game</h1> <!-- Pixelated text title -->
+        <button id="startGameBtn">Start Game</button>
+        <button id="viewHighScoresBtn">High Scores</button>
+        <button id="exitBtn">Exit</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen hidden">
+        <div class="controls">
+            <button id="restartGameBtn">Restart Game</button>
+            <button id="backBtn">Back</button>
+            <span id="currentScore">Score: 0</span>
+        </div>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div id="gameMessage"></div>
+        <div class="arrow-controls">
+            <div class="arrows">
+                <button id="upBtn">&uarr;</button>
+            </div>
+            <div class="arrows">
+                <button id="leftBtn">&larr;</button>
+                <button id="downBtn">&darr;</button>
+                <button id="rightBtn">&rarr;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- High Score Screen -->
+    <div id="highScoreScreen" class="screen hidden">
+        <h2 class="pixelated-title">High Scores</h2>
+        <ul id="highScoreList"></ul>
+        <button id="backToMenuBtn">Back</button>
+    </div>
+
+    <script src="snake.js"></script>
+</body>
+</html>
